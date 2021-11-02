@@ -1,0 +1,18 @@
+Start
+This is a sentence
+in
+12345
+asdfg
+21
+Hello World
+not in
+Code
+Hi
+Hello
+only
+CodeWriter21
+Filter
+no
+Test
+text
+TheEnd
