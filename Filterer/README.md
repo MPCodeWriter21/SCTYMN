@@ -21,9 +21,9 @@ Usage
 -----
 
 ```
-usage: filterer.py [-h] [--in IN_] [--not-in NOT_IN] [--startswith STARTSWITH] [--endswith
-                   ENDSWITH] [--only ONLY] [--no NO] [--regex-match REGEX_MATCH]
-                   [--regex-full-match REGEX_FULL_MATCH]
+usage: filterer.py [-h] [--in IN_] [--not-in NOT_IN] [--in-file IN_FILE] [--not-in-file
+                   NOT_IN_FILE] [--startswith STARTSWITH] [--endswith ENDSWITH] [--only ONLY]
+                   [--no NO] [--regex-match REGEX_MATCH] [--regex-full-match REGEX_FULL_MATCH]
                    FileName SavePath
 
 positional arguments:
@@ -37,6 +37,12 @@ options:
                         Only save the lines that have this word.
   --not-in NOT_IN, -n NOT_IN
                         Only save the lines that don't have this word.
+  --in-file IN_FILE, -I IN_FILE
+                        Only save the lines that have one of the statements in the input file's
+                        lines.
+  --not-in-file NOT_IN_FILE, -N NOT_IN_FILE
+                        Only save the lines that don't have any of the statements in the input
+                        file's lines.
   --startswith STARTSWITH, -s STARTSWITH
                         Only save the lines that start with this word.
   --endswith ENDSWITH, -e ENDSWITH
@@ -67,10 +73,22 @@ python filterer.py InputFile.txt OutputFile1.txt -i 21
 python filterer.py InputFile.txt OutputFile2.txt -n er
 ```
 
++ IN FILE: Saves only the lines that contain the one of the input words
+
+```shell
+python filterer.py InputFile.txt OutputFile1.txt -I x.txt
+```
+
++ NOT IN FILE: Saves only the lines that do not contain any of the input words
+
+```shell
+python filterer.py InputFile.txt OutputFile10.txt -N x.txt
+```
+
 + STARTSWITH: Saves only lines that start with the input phrase
 
 ```shell
-python filterer.py InputFile.txt OutputFile3.txt -s C
+python filterer.py InputFile.txt OutputFile11.txt -s C
 ```
 
 + ENDSWITH: Saves only lines that end with the input phrase

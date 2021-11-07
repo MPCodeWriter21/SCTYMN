@@ -22,6 +22,10 @@ def main():
                         help='Only save the lines that have this word.')
     parser.add_argument('--not-in', '-n', action='store', type=str,
                         help="Only save the lines that don't have this word.")
+    parser.add_argument('--in-file', '-I', action='store', type=str,
+                        help="Only save the lines that have one of the statements in the input file's lines.")
+    parser.add_argument('--not-in-file', '-N', action='store', type=str,
+                        help="Only save the lines that don't have any of the statements in the input file's lines.")
     parser.add_argument('--startswith', '-s', action='store', type=str,
                         help='Only save the lines that start with this word.')
     parser.add_argument('--endswith', '-e', action='store', type=str,
@@ -37,13 +41,17 @@ def main():
     # Parses the command line arguments
     args = parser.parse_args()
 
-    if not any([args.in_, args.not_in, args.only, args.no, args.startswith, args.endswith, args.regex_match,
-                args.regex_full_match]):
+    if not any(
+            [args.in_, args.not_in, args.in_file, args.not_in_file, args.only, args.no, args.startswith, args.endswith,
+             args.regex_match,
+             args.regex_full_match]):
         logger.error(gc('lr') + 'No mode chosen!')
         logger.error(gc('lm') + 'Please chose a mode' + gc('lr') + ': ' + gc('lc') + '--in' + gc('lr') + ', ' +
-                     gc('lc') + '--not-in' + gc('lr') + ', ' + gc('lc') + '--startswith' + gc('lr') + ', ' + gc('lc') +
-                     '--endswith' + gc('lr') + ', ' + gc('lc') + '--only' + gc('lr') + ', ' + gc('lc') + '--regex-match'
-                     + gc('lr') + ', ' + gc('lc') + '--regex-full-match' + gc('lr') + ', ' + gc('lc') + '--no')
+                     gc('lc') + '--not-in' + gc('lr') + ', ' + gc('lc') + '--in-file' + gc('lr') + ', ' +
+                     gc('lc') + '--not-in-file' + gc('lr') + ', ' + gc('lc') + '--startswith' + gc('lr') + ', ' +
+                     gc('lc') + '--endswith' + gc('lr') + ', ' + gc('lc') + '--only' + gc('lr') + ', ' + gc('lc') +
+                     '--regex-match' + gc('lr') + ', ' + gc('lc') + '--regex-full-match' + gc('lr') + ', ' + gc('lc')
+                     + '--no')
         exit()
 
     # Opens the input and output files
@@ -61,6 +69,26 @@ def main():
         if condition:
             condition += ' and '
         condition += '(args.not_in not in line)'
+    if args.in_file:
+        if condition:
+            condition += ' and '
+        with open(args.in_file, 'r') as file:
+            condition += '('
+            for line in file:
+                condition += '("{}" in line) or '.format(line.replace('\n', '').replace("\"", "\\\""))
+            if condition.endswith(' or '):
+                condition = condition[:-4]
+            condition += ')'
+    if args.not_in_file:
+        if condition:
+            condition += ' and '
+        with open(args.in_file, 'r') as file:
+            condition += '('
+            for line in file:
+                condition += '("{}" not in line) and '.format(line.replace('\n', '').replace("\"", "\\\""))
+            if condition.endswith(' and '):
+                condition = condition[:-5]
+            condition += ')'
     if args.startswith:
         if condition:
             condition += ' and '

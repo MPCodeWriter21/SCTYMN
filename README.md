@@ -10,6 +10,7 @@ save you time when you need a simple script.
 + [Splitter](/Splitter): It can split each line of a file and save some parts of it.
 + [Replacer](/Replacer): It can replace some text in a file with another.
 + [Filterer](/Filterer): It can filter lines of a file with different conditions.
++ [AccentNormalizer](/AccentNormalizer): It can replace each accent character in a file with regular character.
 
 I'd appreciate participation in the development and upgrading of this repository.</br>
 Feel free to fork this repo and make your changes(You can also send a pull request after your job's done ;D )
