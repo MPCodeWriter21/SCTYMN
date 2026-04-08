@@ -1,19 +1,19 @@
 Filterer
 ========
 
-Filterer is a python script that you can use inorder to filter each line of your file and save only the lines that match
-your filter.
+Filterer is a python script that you can use to filter each line of your file and save
+only the lines that match your filter.
 
 Installation
 ------------
 
-You need [Python3](https://Python.org) inorder to run the script. [INSTALL PYTHON](https://Python.org)
+You need [Python3](https://Python.org) to run the script. [INSTALL PYTHON](https://Python.org)
 
-#### Required Packages
+### Used Packages
 
-- [re](https://docs.python.org/3/library/re.html) (Comes with Python core.)
-- [traceback](https://docs.python.org/3/library/traceback.html) (Comes with Python core.)
-- [log21](https://github.com/MPCodeWriter21/log21) (Install using `python3 -m pip install log21`)
+- [re](https://docs.python.org/3/library/re.html)
+- [traceback](https://docs.python.org/3/library/traceback.html)
+- [log21](https://github.com/MPCodeWriter21/log21)
 
 _You can use `pip install -r requirements.txt` to install the required packages._
 
@@ -61,64 +61,64 @@ options:
 
 You can try ;D
 
-+ IN: Saves only the lines that contain the input word
+- IN: Saves only the lines that contain the input word
 
 ```shell
-python filterer.py InputFile.txt OutputFile1.txt -i 21
+python filterer.py example-input.txt output1.txt -i 21
 ```
 
-+ NOT IN: Saves only the lines that do not contain the input word
+- NOT IN: Saves only the lines that do not contain the input word
 
 ```shell
-python filterer.py InputFile.txt OutputFile2.txt -n er
+python filterer.py example-input.txt output2.txt -n er
 ```
 
-+ IN FILE: Saves only the lines that contain the one of the input words
+- IN FILE: Saves only the lines that contain the one of the input words
 
 ```shell
-python filterer.py InputFile.txt OutputFile1.txt -I x.txt
+python filterer.py example-input.txt output1.txt -I x.txt
 ```
 
-+ NOT IN FILE: Saves only the lines that do not contain any of the input words
+- NOT IN FILE: Saves only the lines that do not contain any of the input words
 
 ```shell
-python filterer.py InputFile.txt OutputFile10.txt -N x.txt
+python filterer.py example-input.txt output10.txt -N x.txt
 ```
 
-+ STARTSWITH: Saves only lines that start with the input phrase
+- STARTSWITH: Saves only lines that start with the input phrase
 
 ```shell
-python filterer.py InputFile.txt OutputFile11.txt -s C
+python filterer.py example-input.txt output11.txt -s C
 ```
 
-+ ENDSWITH: Saves only lines that end with the input phrase
+- ENDSWITH: Saves only lines that end with the input phrase
 
 ```shell
-python filterer.py InputFile.txt OutputFile4.txt -e t
+python filterer.py example-input.txt output4.txt -e t
 ```
 
-+ ONLY: Saves only lines that consist of the desired characters
+- ONLY: Saves only lines that consist of the desired characters
 
 ```shell
-python filterer.py InputFile.txt OutputFile5.txt -o abcdef1234567890
+python filterer.py example-input.txt output5.txt -o abcdef1234567890
 ```
 
-+ NO: Saves only lines that don't contain the desired characters
+- NO: Saves only lines that don't contain the desired characters
 
 ```shell
-python filterer.py InputFile.txt OutputFile6.txt -no abcdef1234567890
+python filterer.py example-input.txt output6.txt -no abcdef1234567890
 ```
 
-+ REGEX MATCH: Saves only lines that match the regex pattern
+- REGEX MATCH: Saves only lines that match the regex pattern
 
 ```shell
-python filterer.py InputFile.txt OutputFile7.txt -m "\w+"
+python filterer.py example-input.txt output7.txt -m "\w+"
 ```
 
-+ REGEX FULL MATCH: Saves only lines that fully match the regex pattern
+- REGEX FULL MATCH: Saves only lines that fully match the regex pattern
 
 ```shell
-python filterer.py InputFile.txt OutputFile8.txt -M "\w+"
+python filterer.py example-input.txt output8.txt -M "\w+"
 ```
 
 About
@@ -130,4 +130,3 @@ GitHub: [MPCodeWriter21](https://github.com/MPCodeWriter21)
 
 Telegram Channel: [@CodeWriter21](https://t.me/CodeWriter21)
 
-Aparat Channel: [CodeWriter21](https://www.aparat.com/CodeWriter21)

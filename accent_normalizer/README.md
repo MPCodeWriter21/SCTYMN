@@ -1,8 +1,8 @@
-Replacer
-========
+AccentNormalizer
+================
 
-Replacer is a python script that you can use to replace some text in your file and save
-the result into another file.
+AccentNormalizer is a python script that you can use to replace each accent character in
+your file with regular character.
 
 Installation
 ------------
@@ -11,7 +11,9 @@ You need [Python3](https://Python.org) to run the script. [INSTALL PYTHON](https
 
 ### Used Packages
 
-- traceback
+- [traceback](https://docs.python.org/3/library/traceback.html)
+- [unicodedata](https://docs.python.org/3/library/unicodedata.html)
+- [re](https://docs.python.org/3/library/re.html)
 - [log21](https://github.com/MPCodeWriter21/log21)
 
 _You can use `pip install -r requirements.txt` to install the required packages._
@@ -20,17 +22,21 @@ Usage
 -----
 
 ```
-usage: replacer.py [-h] FileName SavePath Old New
+usage: normalizer.py [-h] FileName SavePath
 
 positional arguments:
   FileName          File path to the target file.
   SavePath          File path to save the output.
-  Old               The Old word to be replaced.
-  New               The New word to replace.
 
 options:
   -h, --help
                         show this help message and exit
+```
+
+### Example
+
+```shell
+python normalizer.py example-input.txt output.txt
 ```
 
 About

@@ -2,4 +2,4 @@
 build/
 dist/
 __pycache__/
-Output*
+*-output*

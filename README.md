@@ -8,10 +8,10 @@ goal is to save you time when you need a simple script.
 List of Scripts
 ---------------
 
-+ [Splitter](/Splitter): It can split each line of a file and save some parts of it.
-+ [Replacer](/Replacer): It can replace some text in a file with another.
-+ [Filterer](/Filterer): It can filter lines of a file with different conditions.
-+ [AccentNormalizer](/AccentNormalizer): It can replace each accent character in a file
++ [splitter](/splitter): It can split each line of a file and save some parts of it.
++ [replacer](/replacer): It can replace some text in a file with another.
++ [filterer](/filterer): It can filter lines of a file with different conditions.
++ [accent-normalizer](/accent_normalizer): It can replace each accent character in a file
   with regular character.
 
 I'd appreciate participation in the development and upgrading of this repository.
