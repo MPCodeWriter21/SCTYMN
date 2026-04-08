@@ -11,7 +11,7 @@ import re
 from log21 import ColorizingArgumentParser, get_logger
 
 # Defines a logger
-logger = get_logger('Splitter', show_level=False)
+logger = get_logger('AccentNormalizer', show_level=False)
 
 
 def strip_accents(text: str) -> str:
