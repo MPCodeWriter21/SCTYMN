@@ -13,6 +13,7 @@ List of Scripts
 + [filterer](/filterer): It can filter lines of a file with different conditions.
 + [accent-normalizer](/accent_normalizer): It can replace each accent character in a file
   with regular character.
++ [dns-server](/dns_server): A simple DNS server meant for overriding some records.
 
 I'd appreciate participation in the development and upgrading of this repository.
 
@@ -27,4 +28,3 @@ Author: CodeWriter21 (Mehrad Pooryoussof)
 GitHub: [MPCodeWriter21](https://github.com/MPCodeWriter21)
 
 Telegram Channel: [@CodeWriter21](https://t.me/CodeWriter21)
-
