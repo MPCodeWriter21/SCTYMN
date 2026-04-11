@@ -8,12 +8,15 @@ goal is to save you time when you need a simple script.
 List of Scripts
 ---------------
 
++ [dup-finder](/dup_finder): A simple script that scans given directories for duplicate
+  files.
++ [dns-server](/dns_server): A simple DNS server meant for overriding some records based
+  domain patterns.
++ [accent-normalizer](/accent_normalizer): It can replace each accent character in a file
+  with regular character.
 + [splitter](/splitter): It can split each line of a file and save some parts of it.
 + [replacer](/replacer): It can replace some text in a file with another.
 + [filterer](/filterer): It can filter lines of a file with different conditions.
-+ [accent-normalizer](/accent_normalizer): It can replace each accent character in a file
-  with regular character.
-+ [dns-server](/dns_server): A simple DNS server meant for overriding some records.
 
 I'd appreciate participation in the development and upgrading of this repository.
 
