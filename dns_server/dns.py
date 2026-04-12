@@ -12,14 +12,14 @@ from dnslib.server import DNSServer, DNSHandler, BaseResolver
 
 # Proxied domains - will be processed and added to OVERRIDE
 PROXIED_DOMAINS = {
-    (
-        # This will be expanded to "*.ytimg.com" and "ytimg.com"
-        r"ytimg\.com",
-        r"googlevideo\.com",
-        r"youtube\.com",
-        r"gstatic\.com",
-        r"googleusercontent\.com",
-    ): A("186.206.229.109")
+    # (
+    #     # This will be expanded to "*.ytimg.com" and "ytimg.com"
+    #     r"ytimg\.com",
+    #     r"googlevideo\.com",
+    #     r"youtube\.com",
+    #     r"gstatic\.com",
+    #     r"googleusercontent\.com",
+    # ): A("186.206.229.109")
 }
 
 # Override domains
